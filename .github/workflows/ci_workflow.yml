@@ -12,4 +12,4 @@ jobs:
         
       - name: Build Docker image
         run: |
-          docker build -t frontend:1 .
+          docker build -t frontend:2 .
