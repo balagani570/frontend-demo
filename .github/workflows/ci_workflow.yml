@@ -3,14 +3,16 @@ on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 permissions:
   contents: read
   id-token: write
+  actions: read
+  security-events: write
 
 jobs:
-
-
   SAST:
     name: CodeQL Scan
     runs-on: ubuntu-latest
