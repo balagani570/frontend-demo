@@ -1,10 +1,10 @@
 name: Frontend CI workflow
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+ #   branches: [ "main" ]
 
 permissions:
   contents: read
@@ -50,7 +50,7 @@ jobs:
           category: "/language:javascript-typescript"
 
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     env:
       ECR_REPOSITORY: frontend
       IMAGE_TAG: ${{ github.run_number }}
